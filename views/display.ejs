@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+    <table class="table table-striped">
+        <tr> 
+
+            <th>Driver Id</th> 
+            <th>Driver Name</th> 
+            <th>Driving Route</th> 
+            <th>Visited Month</th> 
+            <th>Visiting Number</th> 
+            <th>Salary</th>
+            <th>Update</th>
+            <th>Delete</th> 
+        
+        </tr>
+
+        <% for(var i = 0; i< drivers.length ;i++ ) { %>
+
+            <tr>
+
+                <td><%= drivers[i].driverId %></td>
+                <td><%= drivers[i].driverName %></td>
+                <td><%= drivers[i].drivingRoute %></td>
+                <td><%= drivers[i].visitMonth %></td>
+                <td><%= drivers[i].visitCount %></td>
+                <td><%= drivers[i].salary %></td>
+
+                <td><a href="/edit/<%=drivers[i].id%>" class="btn btn-info">Update</a></td>
+
+                <td><a href="/delete/<%=drivers[i].id%>" class="btn btn-danger">Delete</a></td>
+
+            </tr>
+
+        <% } %>
+    </table><br><br>
+
+    <a href="/add" class="btn btn-success">Insert Driver</a>
+</div>
+
+</body>
+</html>

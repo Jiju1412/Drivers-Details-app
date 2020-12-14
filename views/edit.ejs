@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <br><br>
+   <div class="container">
+
+    <form action="/update/<%= drv.id%>" method="post">
+    
+        <div class="form group">
+
+            <label for="driverId">Driver Id</label>
+            <input type="text" id="driverId" name="driverId" value="<%= drv.driverId %>" class="form control" >
+
+        </div>
+
+        <div class="form group">
+
+            <label for="driverName">Driver Name</label>
+            <input type="text" id="driverName" name="driverName" value="<%= drv.driverName %>" class="form control" >
+
+        </div>
+
+        <div class="form group">
+
+            <label for="drivingRoute">Driver Route</label>
+            <input type="text" id="drivingRoute" name="drivingRoute" value="<%= drv.drivingRoute %>" class="form control" >
+
+        </div>
+
+        <div class="form group">
+
+            <label for="visitMonth">Month Visiting</label>
+            <input type="text" id="visitMonth" name="visitMonth" value="<%= drv.visitMonth %>" class="form control" >
+
+        </div>
+
+        <div class="form group">
+
+            <label for="visitCount">Number of Visits</label>
+            <input type="text" id="visitCount" name="visitCount" value="<%= drv.visitCount %>" class="form control" >
+
+        </div>
+
+        <div class="form group">
+
+            <label for="salary">Salary</label>
+            <input type="text" id="salary" name="salary" value="<%= drv.salary %>" class="form control" >
+
+        </div><br><br>
+
+        <button class="btn btn-success" type="submit">SUBMIT</button>
+    </form>
+</div>
+</body>
+</html>
